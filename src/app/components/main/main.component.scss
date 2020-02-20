@@ -1,0 +1,32 @@
+main {
+    height: 20rem;
+    background: linear-gradient(90deg, rgba(255, 76, 0, .7) 0%, rgba(255, 98, 0, .7) 51%, rgba(255, 171, 0, .7) 100%), url('/assets/images/mainpet.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    h1 {
+        padding: 5rem 0 0 5rem;
+        font-weight: bold;
+    }
+    h2 {
+        padding-left: 5rem;
+    }
+    .custom-buttons {
+        padding-top: 5rem;
+        padding-left: 15rem;
+        button {
+            color: #ffffff;
+            border-radius: 2rem;
+        }
+    }
+}
+
+.orange {
+    background: rgb(255, 76, 0);
+}
+
+.yellow {
+    background: rgb(255, 171, 0);
+}
