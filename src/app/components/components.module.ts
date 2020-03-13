@@ -5,9 +5,16 @@ import { FooterComponent } from './footer/footer.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { AlberguesComponent } from './albergues/albergues.component';
 import { DonacionComponent } from './donacion/donacion.component';
-import { VoluntarioComponent } from './voluntario/voluntario.component';
 import { MainComponent } from './main/main.component';
-
+import { NoticiaComponent, NoticiaDialog } from './noticia/noticia.component';
+import { VoluntarioComponent } from './voluntario/voluntario.component';
+import { GaleriaComponent } from './galeria/galeria.component';
+import { ChatComponent } from './chat/chat.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,11 +24,20 @@ import { MainComponent } from './main/main.component';
     NoticiasComponent,
     AlberguesComponent,
     DonacionComponent,
+    MainComponent,
+    NoticiaComponent,
     VoluntarioComponent,
-    MainComponent
+    GaleriaComponent,
+    ChatComponent,
+    NoticiaDialog
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PipesModule,
+    MatDialogModule,
+    MatCardModule,
+    MatGridListModule,
+    FormsModule
   ],
   exports: [
     AlberguesComponent,
@@ -29,7 +45,10 @@ import { MainComponent } from './main/main.component';
     NavbarComponent,
     FooterComponent,
     NoticiasComponent,
-    MainComponent
+    MainComponent,
+    VoluntarioComponent,
+    GaleriaComponent,
+    ChatComponent
   ]
 })
 export class ComponentsModule { }

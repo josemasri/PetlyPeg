@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{data.noticia.titulo}}</h2>
+<mat-dialog-content class="mat-typography">
+  <img class="w-100 h-50" *ngIf="data.noticia.img"  [src]="data.noticia.img | image:'noticias'" alt="">
+  {{data.noticia.contenido}}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="btn btn-primary btn-block" mat-button mat-dialog-close>Listo</button>
+</mat-dialog-actions>

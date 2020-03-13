@@ -1,0 +1,23 @@
+// # id
+// . class
+$color-1: rgb(0, 36, 0);
+$color-2: rgb(39, 59, 9);
+$color-3: rgb(88, 100, 29);
+$color-4: hsl(78, 32%, 43%);
+$color-5: hsl(279, 18%, 85%);
+#donaciones {
+    // background: linear-gradient(90deg, rgba(0, 36, 0, .7) 0%, rgba(39, 59, 9, .7) 51%, rgba(88, 100, 29, .7) 100%), url('/assets/images/dog.jpg') no-repeat center center fixed;
+    // background-image: url('/assets/images/wall4.jpg');
+    background-color: #3f3f3f;
+    padding-top: 2rem;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+#btnDonar {
+    margin: 0 auto;
+    button {
+        width: 100%;
+    }
+}

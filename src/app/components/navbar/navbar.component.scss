@@ -1,9 +1,12 @@
 .nav {
-    background: rgb(255, 76, 0);
-    background: linear-gradient(90deg, rgba(255, 76, 0, 1) 0%, rgba(255, 98, 0, 1) 51%, rgba(255, 171, 0, 1) 100%);
-    padding: 1rem 0;
+    background: linear-gradient(90deg, rgb(0, 36, 0) 0%, rgb(39, 59, 9) 51%, rgb(88, 100, 29) 100%);
 }
 
 a.navbar-brand {
     padding-left: 10rem;
+    color: #ffffff;
+}
+
+.nav-item {
+    color: #ffffff;
 }

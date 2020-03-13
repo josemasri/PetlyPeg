@@ -1,1 +1,48 @@
-<p>donacion works!</p>
+<section id="donaciones">
+  <h1 class="text-center">Donar para ayudar</h1>
+
+  <div class="card-body">
+    <form id="donacionForm">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="form-group">
+            <label for="Money">¿Cuanto deseas donar?</label>
+            <select class="form-control" name="cantidad" [(ngModel)]="cantidad" (change)="actualizaCantidad()">
+              <option value=""></option>
+              <option value="20">$20MXN</option>
+              <option value="50">$50MXN</option>
+              <option value="100">$100MXN</option>
+              <option value="200">$200MXN</option>
+              <option value="300">$500MXN</option>
+              <option value="400">$1000MXN</option>
+              <option value="per">Ingresar cantidad</option>
+            </select>
+          </div>
+          <div class="form-group" *ngIf="this.cantidad === 'per'" (change)="actualizaCantidad()">
+            <label for="personalizado">Ingresa la cantidad deseada</label>
+            <input type="number" class="form-control" name="personalizado" [(ngModel)]="personalizado">
+          </div>
+          <div class="form-group">
+            <label for="periodo">Modalidad</label>
+            <select class="form-control" ngModel name="periodo">
+              <option value="mensual">Mensualmente</option>
+              <option value="unica">Por única vez</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-2"></div>
+        <div class="col-8" id="paypal" #paypal>
+
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

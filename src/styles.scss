@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~animate.css/animate.min';
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$color-1: #002400;
+$color-2: #273B09;
+$color-3: #58641D;
+$color-4: #7B904B;
+$color-5: #DBD2E0;
+.bg-1 {
+    background-color: $color-1;
+}
+
+.bg-2 {
+    background-color: $color-2;
+}
+
+.bg-3 {
+    background-color: $color-3;
+}
+
+.bg-4 {
+    background-color: $color-4;
+}
+
+.bg-5 {
+    background-color: $color-5;
+}
+
+.bg-white {
+    background-color: $color-5;
+}
+
+.color-dark {
+    color: #000000!important;
+}

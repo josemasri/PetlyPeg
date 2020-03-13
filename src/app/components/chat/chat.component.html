@@ -1,0 +1,51 @@
+<a (click)="showChat()" class="float" target="_blank">
+  <i class="far fa-comments my-float"></i>
+</a>
+<div class="popup-box chat-popup" id="qnimate" [class.popup-box-on]="chatActive">
+  <div class="popup-head">
+    <div class="popup-head-left pull-left row">
+      <div class="col-8">
+        <p class="text-center">Chat de Petly</p>
+      </div>
+      <div class="col-4">
+        <button id="removeClass" class="chat-header-button pull-right" type="button" (click)="showChat()"><i
+          class="fas fa-times-circle"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="popup-messages">
+    <div class="mt-5 text-center" *ngIf="chatMessages.length === 0" >
+      Envia un mensaje para iniciar
+    </div>
+    <div class="direct-chat-messages" id="msgContainer">
+      <div *ngIf="chatMessages.length > 0"  class="chat-box-single-line">
+        <abbr class="timestamp">{{date | date:'short'}}</abbr>
+      </div>
+      <div class="" *ngFor="let chatMessage of chatMessages">
+        <div class="direct-chat-msg doted-border">
+          <div class="direct-chat-info clearfix">
+            <span class="direct-chat-name pull-left">{{chatMessage.from}}</span>
+          </div>
+          <!-- /.direct-chat-info -->
+          <img alt="message user image" [src]="chatMessage.img" class="direct-chat-img">
+          <!-- /.direct-chat-img -->
+          <div class="direct-chat-text">
+            {{chatMessage.message}}
+          </div>
+          <div class="direct-chat-info clearfix">
+            <span class="direct-chat-timestamp pull-right">{{chatMessage.date | date:'shortTime'}}</span>
+          </div>
+          <!-- /.direct-chat-text -->
+        </div>
+      </div>
+
+      <!-- Message. Default to the left -->
+    </div>
+  </div>
+  <div class="popup-messages-footer">
+    <textarea id="status_message" placeholder="Escribe un mensaje..." rows="10" cols="40" name="message" [(ngModel)]="message"></textarea>
+    <div class="btn-footer">
+      <button type="button" (click)="sendMessage()" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> </button>
+    </div>
+  </div>
+</div>
