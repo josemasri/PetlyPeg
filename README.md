@@ -1,4 +1,4 @@
-# PetlyAdmin
+# PetlyPeg
 ## Instrucciones para ejecutar el código fuente
 ### 1.- Descargar los archivos de este repositorio o ejecutar el siguiente comando
 #### ``git clone https://github.com/josemasri/PetlyPeg``
